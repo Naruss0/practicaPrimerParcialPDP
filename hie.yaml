@@ -1,0 +1,7 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "kataFuncionalPDP2025:lib"
+
+    - path: "./test"
+      component: "kataFuncionalPDP2025:test:kataFuncionalPDP2025-test"
