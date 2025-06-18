@@ -81,12 +81,3 @@ disneyNoEsistis atracciones = all (null . cantidadDeReparaciones) (filter ((> 5)
 
 --- Punto 4 ---
 
-reparacionPeola :: Atraccion -> Bool
-reparacionPeola atraccion = verificarMejoras atraccion (cantidadDeReparaciones atraccion)
-  where verificarMejoras _ [] = True
-        verificarMejoras _ [_] = True
-        verificarMejoras atraccionActual (reparacion1:reparacion2:resto) 
-          | esBuenaLaAtraccion (reparacion2 (reparacion1 atraccionActual)) > esBuenaLaAtraccion (reparacion1 atraccionActual) = 
-              verificarMejoras (reparacion1 atraccionActual) (reparacion2:resto)
-          | otherwise = False
-
